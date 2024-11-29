@@ -181,7 +181,7 @@ order_sections.forEach(order_section => {
                 });
             }else{
                 
-                const Whatsapp_number = 8777687037;
+                const Whatsapp_number = +918777687037;
 
                 var whatsappURL = "https://wa.me/"+Whatsapp_number+"?text="+"Name: "+customerName+"%0a"+"%0a"
                 +"Address: "+customerAddress+"%0a"+"%0a"
