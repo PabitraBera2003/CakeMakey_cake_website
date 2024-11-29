@@ -1,0 +1,761 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* navbar */
+
+nav{
+    width: 100%;
+    background-color: rgb(176, 115, 72);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.nav-left{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-left a{
+    height: 100%;
+    font-size: 35px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.nav-left a:hover{
+    color: #000;
+}
+
+.nav-right{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.nav-right ul{
+    list-style: none;
+    display: flex;
+}
+.nav-right ul li{
+    height: 50px;
+    font-size: 20px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-right ul li a{
+    padding: 15px;
+    text-decoration: none;
+    color: #fff;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.nav-right ul li a:hover{
+    border: 2px solid #fff;
+    border-radius: 2px;
+}
+
+
+/* Container */
+
+.container{
+    margin-top: 80px;
+    padding: 15px 0;
+}
+
+
+/* For Hidding Background */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 998;
+    display: none;
+    transition: backdrop-filter 0.5s ease;
+}
+
+/* Brand Slider */
+
+.top-brands{
+    width: 100%;
+}
+.top-brands h2{
+    margin: 15px;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+.brand-name-container{
+    width: 100%;
+}
+.brand-name-contents{
+    display: flex;
+    justify-content: space-evenly;
+}
+.brand-names{
+    min-width: 250px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    margin: 20px;
+}
+.brand-logo{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+    background-color: #fff;
+    border-radius: 3px;
+}
+.brand-names img{
+    width: 140px;
+}
+.brand-names img:hover{
+    width: 150px;
+    transition: 0.3s ease;
+ }
+.brand-names span{
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 15px;
+}
+
+
+/* Banners */
+
+.banner-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.banner-1,
+.banner-2,
+.banner-3{
+    height: 250px;
+    max-width: 780px;
+    min-width: 200px;
+    flex: 1;
+    display: flex;
+    border-radius: 10px;
+    margin: 20px;
+    position: relative;
+}
+.banner-1{
+    background-image: url('Assests/banner_images/Ultimate\ Chocolate\ Euphoria\ Cake\ -.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.banner-2{
+    background-image: url('Assests/banner_images/Mocha\ Brownie\ Ice\ Cream\ Cake\ _\ The\ Best\ Homemade\ Ice\ Cream\ Cake\ Recipe.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.banner-3{
+    background-image: url('Assests/banner_images/bakery-baking-cookies-cooking.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-buttons{
+    font-size: 16px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 700;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 30px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    cursor: pointer;
+}
+.banner-buttons:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+/* Item Sections */
+
+.item-sections{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.item-heading{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.item-heading h2{
+    font-size: 35px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin: 10px;
+}
+.item-heading hr{
+    height: 1px;
+    width: 90%;
+    margin-left: 20px;
+}
+.cake-item{
+    max-height: 450px;
+    max-width: 250px;
+    min-height: 380px;
+    min-width: 300px;
+    flex: 1;
+    border: 1px solid #a6a6a6;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    margin: 10px 0;
+    position: relative;
+}
+
+.item-photo{
+    min-height: 195px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.item-photo img{
+    max-height: 238px;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    position: absolute;
+    top: 0;
+}
+.description{
+    width: 100%;
+    line-height: 25px;
+    padding: 30px 20px;
+    position: absolute;
+    bottom: 0;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+.descrip{
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    line-height: 18px;
+    margin-bottom: 10px;
+}
+.price{
+    font-size: 16px;
+    font-weight: 800;
+    font-family: "Roboto Condensed", sans-serif;
+    color: #000;
+}
+
+/*----------------------------------------------------------*/
+
+.cake-info{
+    height: 500px;
+    max-width: 90%;
+    position: fixed;
+    top: 10%;
+    left: 5%;
+    z-index: 1000;
+    display: none;
+}
+.cake1-info,
+.cake2-info,
+.cake3-info,
+.cake4-info,
+.cake5-info,
+.cake6-info,
+.cake7-info,
+.cake8-info{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    display: none;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #fff;
+    padding: 10px;
+}
+.cake-info-left,
+.cake-info-right{
+    height: 100%;
+}
+.cake-info-left{
+    border-radius: 10px 0 0 10px;
+    min-width: 50%;
+    flex: 1;
+}
+.cake-info-left img{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+.cake-info-right{
+    min-width: 50%;
+    border-radius: 0 10px 10px 0;
+    padding: 20px 30px;
+    flex: 1;
+    overflow-y: scroll;
+}
+.cake-info-right h1{
+    font-family: "Oleo Script Swash Caps", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+.cake-info-right h3{
+    font-family: "Pompiere", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    margin: 20px 0;
+}
+.cake-info-right p{
+    line-height: 30px;
+    font-family: "Merienda", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+.cake-info-right h4{
+    margin-top: 20px;
+}
+.cake-info-right .quantity_sec{
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 1px solid grey;
+    margin: 10px 0;
+}
+.cake-info-right .quantity_sec .quantity_decrease,
+.cake-info-right .quantity_sec .quantity_increase{
+    height: 40px;
+    width: 40px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.cake-info-right .quantity_number{
+    height: 40px;
+    width: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.exit-info{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #000;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    display: block;
+}
+.cake-info-right .buy-order{
+    padding: 15px 30px;
+    margin: 15px 0;
+    background-color: chocolate;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 700;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+}
+.cake-info-right .buy-order:hover{
+    background-color: #000;
+}
+
+.order-section{
+    width: 100%;
+    display: none;
+    flex-direction: column;
+}
+.order-section .name-section,
+.order-section .address-section,
+.order-section .number-section,
+.order-section .cake-name-section,
+.order-section .quantity-section{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.order-section input{
+    height: 40px;
+    width: 80%;
+    padding: 10px 10px;
+}
+.order-section h3{
+    font-size: 20px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.order-section h5{
+    font-size: 10px;
+    font-weight: 300px;
+    color: #757575;
+    margin: 5px 0;
+}
+.order-section .place-order{
+    height: 50px;
+    width: 120px;
+    background-color: chocolate;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    margin: 20px 0;
+}
+.order-section .place-order:hover{
+    background-color: #000;
+}
+.order-section label{
+    height: 15px;
+    display: flex;
+    align-items: center;
+}
+.order-section label input{
+    height: 15px;
+    width: 15px;
+}
+.order-section label span{
+    font-size: 10px;
+    font-weight: 300px;
+    color: #545454;
+    margin: 0 5px;
+}
+
+
+/*----------------------------------------------------------*/
+
+/* Footer Section*/
+
+footer{
+    width: 100%;
+    background-color: rgb(108, 60, 26);
+}
+
+.info-section{
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.site-info{
+    display: flex;
+    flex-direction: column;
+    min-width: 350px;
+    flex: 1;
+    margin-right: 30px;
+}
+.info-section section .logo{
+    font-size: 35px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+}
+.help-mail{
+    color: #fff;
+    text-decoration: none;
+}
+.help-mail:hover{
+    text-decoration: underline;
+}
+.location,
+.contact-info{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.location i,
+.contact-info i{
+    font-size: 25px;
+    color: #fff;
+    margin-right: 5px;
+}
+.social-links{
+    display: flex;
+    margin-top: 10px;
+}
+.social-links a{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #000;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+}
+.social-links a:hover{
+    background-color: #000;
+    color: #fff;
+}
+.info-section span{
+    color: #c9c9c9;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    margin: 10px 0;
+}
+.info-section section li{
+    list-style: none;
+}
+.info-section section li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 20px;
+}
+.info-section section li a:hover{
+    color: rgb(254, 113, 13);
+}
+
+.footer-decoration{
+    height: 70px;
+    border-top: 1px solid #a6a6a6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.payment-gates{
+    height: 20px;
+    display: flex;
+}
+.payment-gates img{
+    height: 100%;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+
+/* Error-sections */
+
+.name-section .name-error,
+.address-section .address-error,
+.number-section .phn-no-error,
+.cake-name-section .choice-error,
+.quantity-section .quantity-error{
+    font-size: 11px;
+    font-family: sans-serif;
+    font-style: normal;
+    color: red;
+    display: none;
+}
+
+/* media queries */
+
+@media(max-width: 1400px){
+
+
+    nav{
+        padding: 10px;
+    }
+    .nav-left{
+        height: 50px;
+    }
+    .nav-left a{
+        font-size: 27px;
+    }
+    .brand-name-container{
+        overflow: hidden;
+        overflow-x: scroll;
+    }
+    .brand-name-contents{
+        width: 500%;
+    }
+    .brand-logo{
+        height: 250px;
+    }
+    .banner-1,
+    .banner-2,
+    .banner-3{
+        height: 250px;
+        margin: 15px;
+    }
+    .cake-item{
+        min-height: 280px;
+        min-width: 170px;
+        margin: 15px 5px;
+    }
+    .description{
+        line-height: 18px;
+        padding: 15px;
+    }
+    .description h4{
+        font-size: 20px;
+    }
+    .descrip{
+        font-size: 12px;
+    }
+    .site-info{
+        min-width: 100%;
+    }
+    .footer-decoration{
+        flex-wrap: wrap;
+    }
+    .payment-gates{
+        height: 10px;
+    }
+}
+
+@media(max-width: 800px){
+    nav{
+        flex-wrap: wrap;
+    }
+    .nav-left{
+        width: 100%;
+        justify-content: flex-start;
+    }
+    .nav-right ul li a{
+        font-size: 19px;
+    }
+    .top-brands h2{
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .container{
+        margin-top: 150px;
+    }
+    .brand-logo{
+        height: 200px;
+    }
+    .banner-1,
+    .banner-2,
+    .banner-3{
+        height: 200px;
+    }
+    .cake-item{
+        min-width: 150px;
+    }
+    .cake1-info,
+    .cake2-info,
+    .cake3-info,
+    .cake4-info,
+    .cake5-info,
+    .cake6-info,
+    .cake7-info,
+    .cake8-info{
+        height: 100%;
+        width: 100%;
+        overflow-y: scroll;
+    }
+    .cake-info-left{
+        max-height: 310px;
+    }
+    .cake-info-left img{
+        width: 100%;
+        min-height: 300px;
+    }
+    .cake-info-right{
+        min-width: 100%;
+        overflow-y: visible;
+    }
+    .cake-info-right h1{
+        font-size: 22px;
+    }
+    .cake-info-right h3{
+        font-size: 18px;
+    }
+    .cake-info-right p{
+        font-size: 15px;
+    }
+    .order-section input{
+        width: 100%;
+    }
+}
+
+@media(max-width: 700px){
+    .container{
+        padding: 0;
+    }
+    .cake-item{
+        min-width: 170px;
+    }
+    
+}
+
+@media(max-width: 500px){
+    .cake-item{
+        min-width: 150px;
+    }
+    .cake1-info,
+    .cake2-info,
+    .cake3-info,
+    .cake4-info,
+    .cake5-info,
+    .cake6-info,
+    .cake7-info,
+    .cake8-info{
+        height: 600px;
+    }
+}
+@media(max-width: 390px){
+    .nav-right ul li a{
+        font-size: 15px;
+    }
+}
